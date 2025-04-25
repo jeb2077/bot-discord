@@ -2,11 +2,9 @@ import discord
 from discord import utils
 import os
 
-
 import config
 
 os.getcwd()
-
 
 class MyClient(discord.Client):
     async def on_ready(self):
@@ -58,13 +56,7 @@ class MyClient(discord.Client):
         role = discord.utils.get(ctx.guild.roles, name="Общительные люди)")
         await ctx.add_roles(role)
 
-
-
-
 token = os.environ.get('BOT_TOKEN')
-
-
-
 
 # RUN
 client = MyClient()
