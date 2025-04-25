@@ -19,7 +19,7 @@ class MyClient(discord.Client):
             member = utils.get(message.guild.members,
                                id=payload.user_id)  # получаем объект пользователя который поставил реакцию
 
-            
+
 
             try:
                 emoji = str(payload.emoji)  # эмоджик который выбрал юзер
@@ -54,6 +54,8 @@ class MyClient(discord.Client):
             print('[ERROR] KeyError, no role found for ' + emoji)
         except Exception as e:
             print(repr(e))
+
+
 
     async def on_member_join(self, ctx):
         print(ctx)
